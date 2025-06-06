@@ -1,0 +1,209 @@
+body {
+     background-color: black;
+     color: greenyellow;
+     font-family: "Anonymous Pro", monospace;
+}
+
+.waper {
+     height: 100vh;
+     overflow-y: auto;
+     display: flex;
+     flex-direction: column;
+}
+
+.nav {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     z-index: 999;
+     background-color: black;
+     color: greenyellow;
+     padding: 10px;
+     text-align: center;
+     border-top: 1px solid #444;
+     display: flex;
+     justify-content: space-around;
+     /* margin: 32px; */
+     /* float: left; */
+}
+
+.main {
+     height: 12px;
+}
+
+.first-main {
+     background-color: white;
+     color: black;
+     width: 274px;
+     padding: 32px;
+     position: absolute;
+     left: 36vw;
+     border-radius: 8px;
+     top: 25vh;
+     display: none;
+     /* display: ; */
+     animation-name: first-main-animation;
+     animation-duration: 2s;
+     animation-timing-function: ease;
+     animation-direction: reverse;
+}
+
+@keyframes first-main-animation {
+     to {
+          transform: scale(0.4);
+     }
+}
+
+.first-main .p1 {
+     background-color: white;
+     color: rgb(0, 0, 0);
+     font-size: 2em;
+     font-weight: bold;
+     margin: 10px 0;
+     text-align: center;
+}
+
+.first-main .p2 {
+     background-color: white;
+     color: rgb(0, 0, 0);
+     font-size: 1.2em;
+     margin: 10px 0;
+     text-align: center;
+}
+
+.first-main img {
+     width: 50px;
+     background-color: white;
+     filter: invert(1);
+}
+
+.first-main #bu1 {
+     width: 59px;
+     height: 32px;
+     border-style: none;
+     font-size: 15px;
+     cursor: pointer;
+     transition: all 0.3s;
+     background-color: black;
+     color: yellowgreen;
+}
+
+.first-main #bu1:active {
+     transform: translateY(-3px) scale(0.9);
+}
+
+.bu {
+     position: fixed;
+     top: 0;
+     right: 0;
+     border-style: none;
+     width: 49px;
+     height: 49px;
+     background-color: white;
+     border-radius: 300px;
+     cursor: pointer;
+     color: white;
+     font-size: 15px;
+     background-color: green;
+     /* transform: translateY(150px) translateX(-15px); */
+     margin-top: 150px;
+     margin-left: -15px;
+     /* transform: ; */
+}
+
+#manu-1 {
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
+}
+
+#manu-2 {
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
+}
+
+#manu-3 {
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
+     animation-direction: normal;
+}
+
+@keyframes Manu1 {
+     to {
+          transform: translateY(-100px);
+     }
+}
+
+@keyframes Manu1-after {
+     /* from {
+          transform: translateY(-100px);
+     } */
+
+     to {
+          transform: translateY(-100px);
+     }
+}
+
+@keyframes Manu2 {
+     to {
+          transform: translateX(-100px);
+     }
+}
+
+@keyframes Manu2-after {
+     /* from {
+          transform: translateX(-100px);
+     } */
+
+     to {
+          transform: translateX(-100px);
+     }
+}
+
+@keyframes Manu3 {
+     to {
+          transform: translateY(100px);
+     }
+}
+
+@keyframes Manu3-after {
+     /* from {
+          transform: translateY(100px);
+     } */
+
+     to {
+          transform: translateY(100px);
+     }
+}
+
+.second-main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: white;
+     color: black;
+     width: 274px;
+     padding: 32px;
+     position: absolute;
+     left: 36vw;
+     border-radius: 8px;
+     top: 25vh;
+     display: none;
+     /* display: ; */
+     animation-name: first-main-animation;
+     animation-duration: 2s;
+     animation-timing-function: ease;
+     animation-direction: reverse;
+}
+
+.box-1 ,.box-2{
+     background-color: white;
+     width: 231px;
+     margin-left: 24px;
+}
+
+.In{
+     width: 32px;
+     height: 32px;
+     margin: 7px;
+     cursor: pointer;
+}
