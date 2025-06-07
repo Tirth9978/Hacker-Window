@@ -277,16 +277,48 @@ document.getElementById("TbkN-7").addEventListener("click", () => {
 document.getElementById("TbkN-8").addEventListener("click", () => {
 	document.body.style.color = "pink"
 })
-
-document.addEventListener("keydown", () => {
-	const main = document.getElementById("main");
-	const terminal = document.getElementById("main"); // Assuming "terminal" is the same as "main"
-
-	main.innerHTML += mainStr[count] + "<br>";
-	count += 1;
-
-	// Automatic scroll to bottom
+function pageScroll() {
+	window.scrollBy(0, 1);
+	scrolldelay = setTimeout(pageScroll, 10);
+}
+// main.scrollTop = main.scrollHeight;/
+function Second() {
+	main.innerHTML += str
 	main.scrollTop = main.scrollHeight;
+	pageScroll()
+	window.scrollBy(0, 50);
+	setTimeout(() => {
+		Second();
+	}, 1000);
+
+}
+const main = document.getElementById("main");
+main.scrollTop = main.scrollHeight;
+document.addEventListener("keydown", () => {
+	if (count < mainStr.length) {
+
+		const terminal = document.getElementById("main"); // Assuming "terminal" is the same as "main"
+
+		main.innerHTML += mainStr[count] + "<br>";
+		count += 1;
+
+		// Automatic scroll to bottom
+		main.scrollTop = main.scrollHeight;
+	}
+	else {
+		function blinck() {
+			main.innerHTML += "stay :)"
+			for (let i = 0; i < 10; i++) {
+				setTimeout(() => {
+					main.innerHTML += "."
+				}, 1200)
+			}
+			main.innerHTML += "<br>"
+			main.scrollTop = main.scrollHeight;
+		}
+		blinck()
+		Second()
+	}
 });
 document.getElementById("Cro").addEventListener("click", () => {
 	document.querySelector(".second-main").style.display = "none"
