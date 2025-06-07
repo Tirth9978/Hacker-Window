@@ -277,22 +277,29 @@ document.getElementById("TbkN-7").addEventListener("click", () => {
 document.getElementById("TbkN-8").addEventListener("click", () => {
 	document.body.style.color = "pink"
 })
+const main = document.getElementById("main");
+
 function pageScroll() {
 	window.scrollBy(0, 1);
 	scrolldelay = setTimeout(pageScroll, 10);
 }
 // main.scrollTop = main.scrollHeight;/
+const In_Second = setTimeout(() => {
+	Second();
+}, 1000);
+
+document.getElementById("manu-3").addEventListener("click", () => {
+	main.textContent = ""
+	count = 0;
+	clearTimeout(In_Second())
+})
 function Second() {
 	main.innerHTML += str
 	main.scrollTop = main.scrollHeight;
 	pageScroll()
-	window.scrollBy(0, 50);
-	setTimeout(() => {
-		Second();
-	}, 1000);
-
+	In_Second()
 }
-const main = document.getElementById("main");
+
 main.scrollTop = main.scrollHeight;
 document.addEventListener("keydown", () => {
 	if (count < mainStr.length) {
