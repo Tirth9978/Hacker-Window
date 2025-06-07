@@ -36,7 +36,7 @@ body {
      color: black;
      width: 274px;
      padding: 32px;
-     position: absolute;
+     position: fixed;
      left: 36vw;
      border-radius: 8px;
      top: 25vh;
@@ -183,7 +183,7 @@ body {
      color: black;
      width: 274px;
      padding: 32px;
-     position: absolute;
+     position: fixed;
      left: 36vw;
      border-radius: 8px;
      top: 25vh;
