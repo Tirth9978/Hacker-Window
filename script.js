@@ -284,6 +284,7 @@ function pageScroll() {
 	scrolldelay = setTimeout(pageScroll, 10);
 }
 // main.scrollTop = main.scrollHeight;/
+
 const In_Second = setTimeout(() => {
 	Second();
 }, 1000);
@@ -293,7 +294,9 @@ document.getElementById("manu-3").addEventListener("click", () => {
 	count = 0;
 	clearTimeout(In_Second())
 })
+
 function Second() {
+
 	main.innerHTML += str
 	main.scrollTop = main.scrollHeight;
 	pageScroll()
@@ -313,17 +316,6 @@ document.addEventListener("keydown", () => {
 		main.scrollTop = main.scrollHeight;
 	}
 	else {
-		function blinck() {
-			main.innerHTML += "stay :)"
-			for (let i = 0; i < 10; i++) {
-				setTimeout(() => {
-					main.innerHTML += "."
-				}, 1200)
-			}
-			main.innerHTML += "<br>"
-			main.scrollTop = main.scrollHeight;
-		}
-		blinck()
 		Second()
 	}
 });
